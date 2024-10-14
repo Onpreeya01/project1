@@ -13,7 +13,7 @@ model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniL
 
 # Neo4j database connection details
 URI = "neo4j://localhost"
-AUTH = ("neo4j", "12345678")
+AUTH = ("neo4j", "1")
 
 # Function to run Neo4j queries
 def run_query(query, parameters=None):
@@ -113,8 +113,8 @@ def linebot():
     body = request.get_data(as_text=True)
     try:
         json_data = json.loads(body)
-        access_token = 'A0aobhKEnLStv6/dpp/xmcDjLdNTKiMHAV7hHrfESiRpTGcQmlT3258Jphc4CK8qvNRhs3eYTJ7k4tPEruCPy/jxRvDwq80UmRnfyA/LzZkR+eAUMCUelxrOCuCSw+VHU6QyIfn7zbx5oqqh/9ahjgdB04t89/1O/w1cDnyilFU='
-        secret = '0230e7a07ae588d4db5a2e206bbec687'
+        access_token = ''
+        secret = ''
         line_bot_api = LineBotApi(access_token)
         handler = WebhookHandler(secret)
         signature = request.headers['X-Line-Signature']
